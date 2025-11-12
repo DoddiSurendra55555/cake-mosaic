@@ -1,0 +1,170 @@
+/* --- NEW AUTHFORM STYLES --- */
+
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  
+  /* Soft gradient background from your design */
+  background: linear-gradient(135deg, #FFF0F5, #FFF3E0);
+  
+  font-family: var(--font-body);
+}
+
+.auth-logo-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-logo {
+  max-width: 300px; /* Adjust as needed */
+  height: auto;
+}
+
+.auth-tagline {
+  font-size: 1.1rem;
+  color: var(--dark-color, #4E3629);
+  margin-top: 0.5rem;
+}
+
+.auth-form-card {
+  background: var(--panel-color, #fff);
+  padding: 2.5rem;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 450px;
+}
+
+.auth-form-card h2 {
+  font-family: var(--font-heading);
+  color: var(--primary-action, #E07A5F); /* Orange/Red text */
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Social Login Button & Divider Styles Removed --- */
+
+/* --- Form --- */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  font-size: 0.9rem;
+}
+
+/* New input field with icon */
+.input-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--bg-color, #FFFBF5);
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 0 0.75rem;
+}
+
+.input-with-icon span {
+  color: #999;
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding: 0.75rem 0;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  font-family: var(--font-body);
+}
+.input-with-icon input:focus {
+  outline: none;
+}
+
+.input-with-icon:focus-within {
+  border-color: var(--accent-color);
+}
+
+.form-options {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.forgot-password-link {
+  font-size: 0.9rem;
+  color: var(--primary-action);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 0.85rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #F9881F, #E07A5F); /* Orange/Red gradient */
+  color: white;
+  font-size: 1.1rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(224, 122, 95, 0.4);
+}
+.auth-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(224, 122, 95, 0.6);
+}
+
+.auth-switch {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--dark-color);
+}
+
+.auth-switch a {
+  color: var(--primary-action);
+  font-weight: 700;
+  text-decoration: none;
+}
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+.form-group-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.form-group-checkbox label {
+  margin-bottom: 0;
+  margin-left: 0.5rem;
+  font-weight: normal;
+  font-size: 1rem;
+}
+.form-group-checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.form-group.conditional {
+  max-height: 0;
+  overflow: hidden;
+  margin: 0;
+  transition: max-height 0.3s ease-out, margin 0.3s ease-out;
+}
+.form-group.conditional.visible {
+  max-height: 100px;
+  margin-bottom: 1.5rem;
+}

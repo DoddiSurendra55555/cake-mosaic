@@ -1,0 +1,116 @@
+.receipt-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: var(--font-body);
+  /* This ensures the page content isn't hidden under the navbar */
+  padding-top: calc(var(--navbar-height, 60px) + 2rem);
+}
+
+.receipt-box {
+  background: var(--panel-color, #fff);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 2rem 2.5rem;
+}
+
+.receipt-box h2 {
+  font-family: var(--font-heading);
+  color: var(--dark-color);
+  text-align: center;
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.receipt-box p {
+  text-align: center;
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.receipt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.receipt-header h3 {
+  margin: 0;
+  font-family: var(--font-heading);
+  color: var(--dark-color);
+}
+
+.receipt-details h4 {
+  font-family: var(--font-heading);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.receipt-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.receipt-details li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1.1rem;
+  color: var(--dark-color);
+}
+
+.receipt-details li:last-child {
+  border-bottom: none;
+}
+
+.receipt-details li strong {
+  color: #777;
+  margin-right: 1rem;
+  font-weight: normal;
+}
+
+.receipt-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: var(--font-heading);
+  background-color: var(--bg-color);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  color: var(--dark-color);
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  color: var(--primary-action);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* --- Re-using Status Styles --- */
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: #333;
+}
+.status-pending { background-color: #f0e68c; }
+.status-accepted { background-color: #add8e6; }
+.status-in { background-color: #ffa500; }
+.status-delivered { background-color: #90ee90; }
+.status-rejected { background-color: #f08080; color: #fff; }

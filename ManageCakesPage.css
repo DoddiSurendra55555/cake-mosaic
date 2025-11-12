@@ -1,0 +1,226 @@
+.manage-cakes-page {
+  /* This page is already inside .admin-page-content, so padding is inherited */
+  font-family: var(--font-body);
+}
+
+.manage-cakes-page h1, 
+.manage-cakes-page h2 {
+  font-family: var(--font-heading);
+  color: var(--dark-color);
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.manage-cakes-page h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.manage-cakes-page h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Card & Form Styles --- */
+.card-form {
+  background: var(--panel-color);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+.cake-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: flex-end;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+}
+.form-group input:focus, .form-group select:focus {
+  border-color: var(--primary-action);
+  outline: none;
+}
+
+.btn-add-cake {
+  background-color: var(--primary-action);
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  height: 48px; /* Align with inputs */
+}
+.btn-add-cake:hover {
+  background-color: #C06C54;
+}
+
+/* --- Product List --- */
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: var(--panel-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  overflow: hidden;
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-color);
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.product-header h3 {
+  margin: 0;
+  font-family: var(--font-heading);
+  color: var(--dark-color);
+}
+
+.btn-delete-cake {
+  background: #E57373;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.btn-delete-cake:hover {
+  background: #C62828;
+}
+
+/* --- Flavors Section --- */
+.flavors-section {
+  padding: 1.5rem;
+}
+.flavors-section h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+  color: #333;
+}
+
+.flavor-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.flavor-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+}
+.flavor-list li:nth-child(even) {
+  background: var(--bg-color);
+}
+
+.color-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--dark-color);
+  flex-shrink: 0;
+}
+
+.btn-delete-flavor {
+  margin-left: auto;
+  background: #FFEBEE;
+  color: #C62828;
+  border: 1px solid #E57373;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s;
+}
+.btn-delete-flavor:hover {
+  background: #E57373;
+  color: white;
+}
+
+.flavor-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+}
+
+.flavor-form input[type="text"],
+.flavor-form input[type="number"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.flavor-form input[type="color"] {
+  padding: 0;
+  height: 38px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.btn-add-flavor {
+  background: #81C784;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1.1rem;
+  height: 38px;
+  transition: background-color 0.2s;
+}
+.btn-add-flavor:hover {
+  background: #4CAF50;
+}

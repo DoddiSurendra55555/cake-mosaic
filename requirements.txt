@@ -1,0 +1,6 @@
+Flask
+Flask-CORS
+Flask-Bcrypt
+python-dotenv
+Flask-SocketIO
+eventlet

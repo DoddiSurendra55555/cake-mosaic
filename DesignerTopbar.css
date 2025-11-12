@@ -1,0 +1,63 @@
+/* --- Styles for the Designer Topbar --- */
+.designer-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--navbar-height, 60px);
+  padding: 0 1.5rem;
+  background-color: var(--panel-color, #fff);
+  border-bottom: 1px solid #eee;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.topbar-back-btn {
+  text-decoration: none;
+  font-family: var(--font-body);
+  color: var(--dark-color);
+  font-weight: 700;
+}
+
+.topbar-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.topbar-logo {
+  height: 30px;
+  width: 30px;
+}
+.topbar-logo-text {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--dark-color);
+}
+.topbar-tagline {
+  font-family: var(--font-body);
+  color: #777;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.topbar-logout-link {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--dark-color);
+  text-decoration: none;
+}
+.topbar-logout-link:hover {
+  text-decoration: underline;
+}

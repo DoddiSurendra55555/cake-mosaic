@@ -1,0 +1,112 @@
+.browse-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: var(--font-body);
+  /* This ensures the page content isn't hidden under the navbar */
+  padding-top: calc(var(--navbar-height, 60px) + 2rem);
+}
+
+.browse-page-container h1 {
+  font-family: var(--font-heading);
+  color: var(--dark-color);
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.browse-page-container > p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 3rem;
+}
+
+.cake-grid {
+  display: grid;
+  /* This will create a responsive grid:
+     - 1 column on very small screens
+     - 2 columns on small/medium screens
+     - 3 columns on large screens
+  */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.cake-card {
+  background: var(--panel-color, #fff);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(78, 54, 41, 0.08); /* Lighter shadow */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cake-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(78, 54, 41, 0.15);
+}
+
+.cake-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px; /* Taller image */
+  background-color: var(--bg-color, #FFFBF5);
+  font-size: 4rem;
+  color: var(--accent-color, #D4A373);
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cake-card-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* This makes all cards the same height */
+}
+
+.cake-card-content h3 {
+  font-family: var(--font-heading);
+  color: var(--dark-color);
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
+}
+
+.shop-name {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+.shop-name strong {
+  color: var(--dark-color);
+}
+
+.base-price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+}
+
+.design-link {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  text-align: center;
+  background-color: var(--primary-action, #E07A5F);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  transition: background-color 0.2s;
+  margin-top: auto; /* This pushes the button to the bottom */
+}
+
+.design-link:hover {
+  background-color: #C06C54; /* Darker shade */
+}

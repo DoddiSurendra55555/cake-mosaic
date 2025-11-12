@@ -1,0 +1,162 @@
+/* --- New Designer Page Layout --- */
+.designer-page-container {
+  display: flex;
+  flex-direction: column; /* Topbar on top, body below */
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: var(--bg-color, #FFFBF5);
+}
+
+.designer-page-body {
+  display: flex;
+  flex-grow: 1;
+  height: calc(100vh - var(--navbar-height, 60px)); /* Full height minus topbar */
+}
+
+/* --- Canvas (Left Side) --- */
+.designer-canvas-container {
+  flex-grow: 1;
+  height: 100%;
+  position: relative;
+  /* background-color is set by the canvas itself */
+}
+
+.canvas-footer {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: #555;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* --- UI Panel (Right Side) --- */
+.designer-ui-panel {
+  width: 400px;
+  flex-shrink: 0;
+  background: var(--panel-color, #fff);
+  border-left: 1px solid #eee;
+  padding: 1.5rem;
+  overflow-y: auto; /* Make the panel scrollable */
+  height: 100%;
+}
+
+.designer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+}
+
+.designer-header h2 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--dark-color);
+  margin: 0;
+}
+
+.finalize-btn {
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--primary-action, #E07A5F);
+  color: white;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  flex-shrink: 0; /* Don't let it shrink */
+}
+.finalize-btn:hover {
+  background-color: #C06C54;
+}
+
+/* --- UI Sections --- */
+.ui-section {
+  margin-bottom: 1.5rem;
+}
+
+.ui-section h4 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--dark-color);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.option-grid-small {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.option-btn {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #F8F9FA;
+  color: #555;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.option-btn:hover {
+  border-color: var(--accent-dark, #A97C50);
+}
+
+.option-btn.active {
+  background-color: var(--primary-action, #E07A5F);
+  color: white;
+  border-color: var(--primary-action, #E07A5F);
+}
+
+.flavor-color-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid var(--dark-color);
+  flex-shrink: 0;
+}
+
+.deco-btn {
+  background-color: #E8F5E9;
+  border-color: #81C784;
+}
+.deco-btn.active {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+  color: white;
+}
+
+.text-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  background-color: #F8F9FA;
+}
+.text-input:focus {
+  outline: none;
+  border-color: var(--primary-action);
+}

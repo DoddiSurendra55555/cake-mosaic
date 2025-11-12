@@ -1,0 +1,110 @@
+.chat-widget-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+.chat-bubble-toggle {
+  background-color: var(--primary-action);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.chat-window {
+  width: 350px;
+  height: 450px;
+  background: var(--panel-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--bg-color);
+  border-bottom: 1px solid #eee;
+}
+
+.chat-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-family: var(--font-heading);
+}
+
+.chat-header .close-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #777;
+}
+
+.chat-messages {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.message-bubble {
+  padding: 0.5rem 1rem;
+  border-radius: 18px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.message-bubble.sent {
+  background-color: var(--primary-action);
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.message-bubble.received {
+  background-color: var(--bg-color);
+  color: var(--dark-color);
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.chat-input-form {
+  display: flex;
+  border-top: 1px solid #eee;
+  padding: 0.5rem;
+}
+
+.chat-input-form input {
+  flex-grow: 1;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background: var(--bg-color);
+  border-radius: 8px;
+  margin-right: 0.5rem;
+}
+
+.chat-input-form button {
+  background-color: var(--accent-color);
+  border: none;
+  color: white;
+  padding: 0 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}

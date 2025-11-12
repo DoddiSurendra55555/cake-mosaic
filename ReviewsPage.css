@@ -1,0 +1,62 @@
+.admin-reviews-page {
+  font-family: var(--font-body);
+}
+
+.page-title {
+  font-family: var(--font-heading);
+  color: var(--dark-color);
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.review-card {
+  background: var(--panel-color, #fff);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  padding: 1.5rem;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.review-customer {
+  font-weight: 700;
+  color: var(--dark-color);
+}
+
+.review-date {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.star-rating-display {
+  margin-bottom: 1rem;
+}
+
+.star-rating-display .star {
+  font-size: 1.25rem;
+  color: #ccc;
+}
+
+.star-rating-display .star.filled {
+  color: #FFC107; /* Gold star */
+}
+
+.review-text {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+  margin: 0;
+}

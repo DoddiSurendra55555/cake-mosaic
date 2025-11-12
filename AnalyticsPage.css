@@ -1,0 +1,84 @@
+.analytics-page {
+  /* This page is already inside .admin-page-content, so padding is inherited */
+  font-family: var(--font-body);
+}
+
+.analytics-page h1 {
+  font-family: var(--font-heading);
+  color: var(--dark-color);
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+/* --- Stat Cards --- */
+.stat-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: var(--panel-color, #fff);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+.stat-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-family: var(--font-heading);
+  color: #555;
+  font-size: 1rem;
+}
+
+.stat-card p {
+  margin: 0;
+  font-family: var(--font-heading);
+  color: var(--dark-color, #4E3629);
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.stat-card span {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* --- Charts --- */
+.charts-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Line chart is wider */
+  gap: 1.5rem;
+}
+
+.chart-card {
+  background: var(--panel-color, #fff);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+.chart-card h3 {
+  margin-top: 0;
+  font-family: var(--font-heading);
+  color: var(--dark-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .analytics-page {
+    padding: 1rem;
+  }
+}

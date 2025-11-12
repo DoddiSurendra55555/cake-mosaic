@@ -1,0 +1,66 @@
+/* --- GOOGLE FONT IMPORT --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@400;700&display=swap');
+
+/* --- CSS COLOR VARIABLES (Our Theme) --- */
+:root {
+  --bg-color: #FFFBF5;     /* Warm cream background */
+  --panel-color: #FFFFFF; /* Clean white panels */
+  --dark-color: #4E3629;      /* Dark chocolate text */
+  --accent-color: #D4A373;   /* Light caramel accent */
+  --accent-dark: #A97C50; /* Darker caramel */
+  --primary-action: #E07A5F;  /* Pink/Red accent */
+  --shadow: 0 4px 12px rgba(78, 54, 41, 0.1);
+
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Lato', sans-serif;
+  
+  --navbar-height: 60px; /* --- NEW: Navbar height variable --- */
+}
+
+/* --- GLOBAL RESET --- */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--dark-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+/* --- STYLED SCROLLBAR --- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-dark);
+}
+
+/* --- NEW: Main content padding --- */
+/* This prevents pages from being hidden under the fixed navbar */
+.main-content {
+  padding-top: var(--navbar-height);
+  height: calc(100vh - var(--navbar-height));
+  overflow-y: auto;
+}
